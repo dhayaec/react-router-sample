@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://samsung.com/Recipes" version="1.0.0" viewmodes="fullscreen">
+    <access origin="*" subdomains="true"></access>
+    <tizen:application id="1K3CsGDv18.lbpfh" package="1K3CsGDv18" required_version="2.3"/>
+    <tizen:launch_screen ready_when="complete">
+     <tizen:ls_default image="app_loading_splash.gif"/>
+    </tizen:launch_screen>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <name>lbpfh</name>
+    <icon src="org.tizen.lbpfh.png"/>
+    <icon src="org.tizen.lbpfh.small.png"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/download"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+    <tizen:privilege name="http://tizen.org/privilege/fullscreen"/>
+    <tizen:privilege name="http://tizen.org/privilege/volume.set"/>
+    <tizen:privilege name="http://tizen.org/privilege/alarm"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/notification"/>
+    <tizen:privilege name="http://tizen.org/privilege/power"/>
+    <tizen:privilege name="http://tizen.org/privilege/account.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/account.write"/>
+ 
+    <tizen:profile name="mobile"/>
+    <tizen:setting background-support="enable" encryption="disable" hwkey-event="enable"/>
+    <!-- <tizen:app-control> -->
+    <!--    <src name="index.html#search/" reload="disable"/> -->
+    <!--    <operation name="http://tizen.org/appcontrol/operation/view"/> -->
+    <!--    <mime name="image/*"/> -->
+    <!-- </tizen:app-control> -->
+
+    <tizen:app-control>
+        <tizen:src name="index.html" reload="disable"/>
+        <tizen:operation name="http://tizen.org/appcontrol/operation/main"/>
+    </tizen:app-control>
+
+    <tizen:app-control>
+        <tizen:src name="index.html" reload="disable"/>
+        <tizen:operation name="http://tizen.org/appcontrol/operation/getaccesstoken"/>
+    </tizen:app-control>
+
+    <tizen:account multiple-account-support="true">
+    <tizen:icon section="Account">icon.png</tizen:icon>
+    <tizen:icon section="AccountSmall">icon.png</tizen:icon>
+    <tizen:display-name xml:lang="en-gb">Test</tizen:display-name>
+    <tizen:capability>http://tizen.org/account/capability/contact</tizen:capability>
+    </tizen:account>
+
+</widget>
